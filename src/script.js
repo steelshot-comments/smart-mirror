@@ -21,15 +21,15 @@ function getDate() {
 getDate();
 
 async function getWeather() {
-    const res = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=19.1066081&lon=72.9221924&appid=493539b698dd287f1855cd6f2c7976c7&units=metric");
+    const res = await fetch("https://api.openweathermap.org/data/3.0/onecall?lat=19&lon=34&appid=493539b698dd287f1855cd6f2c7976c7");
     var data = await res.json();
 
     console.log(data);
     // Populate card with data
     //   document.getElementById("temperature").innerText = data.main.temp;
-    document.getElementById("temp").innerText = data.main.temp + '°C';
-    document.getElementById("location").innerText = data.name;
-    document.getElementById("humidity").innerText = data.main.humidity;
+    document.getElementById("temp").innerText = current.temp + '°C';
+    document.getElementById("location").innerText = current.name;
+    document.getElementById("humidity").innerText = current.humidity;
 }
 
 getWeather();
