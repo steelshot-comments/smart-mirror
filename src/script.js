@@ -68,6 +68,7 @@ const videoElement = document.querySelector('video');
 
 const constraints = {
     video: {
+        facingMode: 'user',
         height: {
             min: 1, ideal: window.innerHeight, max: window.innerHeight,
         },
